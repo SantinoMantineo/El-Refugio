@@ -24,6 +24,7 @@
 
 .text span {
   color: green;
+  font-weight: bolder;
 }
 
 .reservar {
