@@ -1,8 +1,17 @@
 // Landing.js
 import React from "react";
 import style from "./Landing.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const Landing = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={style.container} id="landing-section">
       <div className={style.text}>
@@ -12,6 +21,9 @@ const Landing = () => {
         <button>
           Reservar
         </button>
+        <div className={style.mobileIcon} onClick={() => scrollToSection("review-section")}>
+          <FontAwesomeIcon icon={faArrowDown} />
+        </div>
       </div>
     </div>
   );

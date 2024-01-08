@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(42, 14, 97, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 195, 255, 0.5);
   background-color: rgba(3, 0, 20, 0.1);
   backdrop-filter: blur(10px);
   z-index: 50;
@@ -55,9 +55,10 @@
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 15px;
     /* Retira el padding en pantallas pequeñas */
     font-size: 23px;
+    
   }
   .navbar .toHome {
     display: none;
