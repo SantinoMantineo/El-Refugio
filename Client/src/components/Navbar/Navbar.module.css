@@ -1,149 +1,65 @@
+/* Navbar.module.css */
 .navbar {
-    display: grid;
-    grid-template-columns: 4fr 5fr 4fr;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: 60px;
-    background-color: red;
-    z-index: 9;
-  }
-  
-  .navbar .toHome {
-    margin-left: 20px;
-  }
-  
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(42, 14, 97, 0.5);
+  background-color: rgba(3, 0, 20, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 10px; /* Ajusta el espacio entre las palabras */
+}
+
+/* Aplica el padding solo en pantallas grandes */
+@media (min-width: 1280px) {
   .navbar a {
-    align-self: center;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+}
+
+.logo img {
+  height: 55px;
   
+  margin-top: 10px;
+}
+
+.directAccess {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Responsividad */
+@media (max-width: 1280px) {
+  .navbar {
+    bottom: 0;
+    justify-content: center;
+  }
+
   .logo {
-    display: grid;
-    height: 60px;
+    display: none;
   }
-  
-  .logo img {
-    height: 55px;
-    align-self: center;
-    justify-self: left;
-    padding-bottom: 2px;
+  .navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 10px;
+    /* Retira el padding en pantallas pequeñas */
+    font-size: 23px;
   }
-  
-  .search {
-    display: flex;
-    align-self: center;
-    justify-self: center;
+  .navbar .toHome {
+    display: none;
   }
-  
-  .search button {
-    width: 40px;
-    height: 40px;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    padding: 0;
-    border: 0;
-    margin-left: 10px;
-  }
-  
-  .search img {
-    padding-top: 2px;
-  }
-  
-  .directAccess {
-    display: inline-flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-  }
-  
-  .directAccess button {
-    align-self: center;
-    justify-self: right;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    margin-left: 10px;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 0;
-    border: 0;
-  }
-  
-  .profilePicture {
-    object-fit: cover;
-    border-radius: 20px;
-    width: 30px;
-    height: 30px;
-  }
-  
-  .modal {
-    display: grid;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 150px;
-    background-color: rgb(210, 210, 210);
-    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.3);
-    border-radius: 10px;
-    z-index: 8;
-  }
-  
-  .modal h3 {
-    color: black;
-    font-size: 14px;
-    text-align: center;
-    margin: 0;
-    margin-top: 20px;
-    font-style: italic;
-  }
-  
-  .accounts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 20px;
-  }
-  
-  .accounts a {
-    justify-self: center;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .accounts button {
-    width: 60px;
-    height: 60px;
-    margin: 0;
-  }
-  
-  .accounts img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  }
-  
-  .under {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  @media (max-width: 1280px) {
-    .navbar {
-      top: auto;
-      bottom: 0;
-    }
-  
-    .logo {
-      display: none;
-    }
-  
-    .navbar .toHome {
-      display: none;
-    }
-  }
-  
+}

@@ -1,0 +1,12 @@
+.container {
+    width: 100%;
+    height: 95vh; /* 90% del alto de la ventana */
+    background-image: url("../../assets/camping.jpg");
+    background-size: cover; /* Ajustar la imagen al contenedor */
+    background-position: center; /* Centrar la imagen en el contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Agrega cualquier otro estilo que desees para el contenido dentro del contenedor */
+  }
+  

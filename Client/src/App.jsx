@@ -3,6 +3,7 @@ import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
 import Form from "./components/Form/Form";
 import Review from "./components/Review/Review";
+import Fotos from "./components/Fotos/Fotos"
 
 import './App.css'
 import axios from "axios";
@@ -14,18 +15,14 @@ function App() {
 
   return (
     <>
+      <Navbar/>        
+      <div className="content">
+        <Landing id="landing-section"/>
+        <Review id="review-section"/>
+        <Fotos id="fotos-section"/>
+      </div>
       <Routes>
-        <Route path="/" element={
-          <>
-            <Navbar/>
-            <Landing/>
-            <Review/>
-          </>
-          }
-        />
-        <Route path="/navbar" element={<Navbar/>}/>
         <Route path="/reserva" element={<Form/>}/>
-        <Route path="/review" element={<Review/>}/>
       </Routes>
     </>
   )

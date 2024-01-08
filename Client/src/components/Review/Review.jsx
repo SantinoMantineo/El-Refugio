@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+// Review.js
+import React from "react";
 import style from "./Review.module.css";
 
 const Review = () => {
-
   return (
-    <>
-<h1>Review</h1>
-    </>
+    <div id="review-section">
+      <h1>Review</h1>
+    </div>
   );
 };
 
