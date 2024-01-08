@@ -19,17 +19,17 @@ const Navbar = () => {
           <Link to="/" onClick={() => scrollToSection("landing-section")}>
             <span>Home</span>
           </Link>
-          <Link onClick={() => scrollToSection("review-section")}>
-            <span>Reseñas</span>
-          </Link>
           <Link onClick={() => scrollToSection("fotos-section")}>
             <span>Fotos</span>
           </Link>
-          <Link to="/reserva">
-            <span>Reservar</span>
+          <Link onClick={() => scrollToSection("review-section")}>
+            <span>Reseñas</span>
           </Link>
           <Link onClick={() => scrollToSection("planes-section")}>
             <span>Planes</span>
+          </Link>
+          <Link onClick={() => scrollToSection("form-section")}>
+            <span>Reservar</span>
           </Link>
         </div>
       </div>

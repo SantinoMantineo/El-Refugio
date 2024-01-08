@@ -5,9 +5,9 @@ import style from "./Form.module.css";
 const Form = () => {
 
   return (
-    <>
+    <div id="form-section">
     <h1>Form</h1>
-    </>
+    </div>
   );
 };
 

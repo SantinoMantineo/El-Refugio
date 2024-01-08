@@ -33,6 +33,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30%;
+  position: relative;
 }
 
 .reservar button {
@@ -53,11 +54,10 @@
 
 .mobileIcon {
   display: none;
-  /* Add styles for the mobile icon */
   color: green;
-  font-size: 30px; /* Adjust the font size as needed */
+  font-size: 30px;
   position: absolute;
-  margin-top: 50%;
+  bottom: 10px; /* Ajusta la posición desde la parte inferior según sea necesario */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -79,8 +79,9 @@
     margin-top: 15px;
     justify-content: center;
     align-items: center;
+    position: static; /* Restaura la posición estática en dispositivos móviles */
   }
-  
+
   .reservar .mobileIcon {
     display: block;
   }
