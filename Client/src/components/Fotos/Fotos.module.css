@@ -5,9 +5,11 @@
     background-image: url("../../assets/background.jpg");
     background-size: cover;
     background-position: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    padding-bottom: 5%;
   }
   
   .overlay {
@@ -24,10 +26,31 @@
     color: white;
     font-size: 50px;
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 46%;
     transform: translate(-50%, -50%);
     z-index: 1;
+  }
+  
+  .carruselcontainer {
+    top: 10%; /* Ajusta según sea necesario */
+    z-index: 2; /* Asegura que el carrusel esté sobre el contenido al hacerse sticky */
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding-top: 8%;
+  }
+  
+  
+  /* Estilos para las imágenes dentro del carrusel */
+  .carrusel img {
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    object-fit: contain; /* Mantiene la relación de aspecto de la imagen sin deformarla */
+    cursor: pointer; /* Agrega un cursor de apuntador al pasar sobre las imágenes */
+    margin: 0 auto;
   }
   
   @media screen and (max-width: 1200px) {
@@ -37,14 +60,46 @@
       left: 45%;
       transform: translate(-50%, -50%);
     }
+
+    .carruselcontainer {
+        padding-top: 50%;
+        width: 70%;
+        height: 70%;
+    }
+    
+    /* Estilos para las imágenes dentro del carrusel */
+    .carrusel img {
+        border-radius: 10px;
+        width: 70%;
+        height: 70%;
+        object-fit: contain; /* Mantiene la relación de aspecto de la imagen sin deformarla */
+        cursor: pointer; /* Agrega un cursor de apuntador al pasar sobre las imágenes */
+
+    }
   }
   
   @media screen and (max-width: 600px) {
     .title {
-      font-size: 25px;
-      top: 10%;
-      left: 43%;
+      font-size: 35px;
+      top: 15%;
+      left: 38%;
       transform: translate(-50%, -50%);
+    }
+    .carruselcontainer {
+        padding-top: 95%;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        margin-top: 40%;
+    }
+    
+    /* Estilos para las imágenes dentro del carrusel */
+    .carrusel img {
+        border-radius: 10px;
+        width: 90%;
+        height: 90%;
+        object-fit: contain; /* Mantiene la relación de aspecto de la imagen sin deformarla */
+        cursor: pointer; /* Agrega un cursor de apuntador al pasar sobre las imágenes */
     }
   }
   
