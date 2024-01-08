@@ -15,23 +15,21 @@ const Navbar = () => {
   return (
     <>
       <div className={style.navbar}>
-        <Link to="/" className={style.toHome}>
-          <div className={style.logo}>
-            <img src={Logo} alt="logo" />
-          </div>
-        </Link>
         <div className={style.directAccess}>
           <Link to="/" onClick={() => scrollToSection("landing-section")}>
             <span>Home</span>
           </Link>
-          <Link to="/" onClick={() => scrollToSection("review-section")}>
-            <span>Reviews</span>
+          <Link onClick={() => scrollToSection("review-section")}>
+            <span>Reseñas</span>
           </Link>
-          <Link to="/" onClick={() => scrollToSection("fotos-section")}>
+          <Link onClick={() => scrollToSection("fotos-section")}>
             <span>Fotos</span>
           </Link>
           <Link to="/reserva">
             <span>Reservar</span>
+          </Link>
+          <Link onClick={() => scrollToSection("planes-section")}>
+            <span>Planes</span>
           </Link>
         </div>
       </div>

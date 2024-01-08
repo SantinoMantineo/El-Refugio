@@ -29,12 +29,6 @@
   }
 }
 
-.logo img {
-  height: 55px;
-  
-  margin-top: 10px;
-}
-
 .directAccess {
   display: flex;
   justify-content: space-around;
@@ -55,12 +49,9 @@
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    margin: 0 15px;
+    margin: 0 11px;
     /* Retira el padding en pantallas pequeñas */
     font-size: 23px;
     
-  }
-  .navbar .toHome {
-    display: none;
   }
 }
