@@ -24,9 +24,9 @@
   
   .title {
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
-    top: 5%;
+    top: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
