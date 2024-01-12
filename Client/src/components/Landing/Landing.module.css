@@ -5,41 +5,41 @@
   background-size: cover;
   background-position: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
 }
 
-.text {
+.titulo {
   grid-column: 1;
   grid-row: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 50px;
   color: white;
-  margin-top: 26%;
-  margin-left: 10%;
+  margin-top: 35vh;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.text span {
-  color: green;
-  font-weight: bolder;
+.text {
+  grid-row: 2;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 8%;
+  color: white;
 }
 
 .reservar {
-  grid-column: 1;
-  grid-row: 2;
+  grid-row: 3;
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
+  margin: auto;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30%;
-  position: relative;
-}
-
-.reservar button {
   background-color: transparent;
-  border: 2px solid green;
+  border: 2px solid rgba(0, 195, 255, 0.5);
   color: white;
   padding: 10px 20px;
   font-size: 20px;
@@ -48,42 +48,17 @@
   backdrop-filter: blur(3px);
 }
 
-.reservar button:hover {
-  background-color: green;
+.reservar:hover {
+  background-color: rgba(0, 195, 255, 0.5);
   color: white;
 }
 
 .mobileIcon {
-  display: none;
-  color: green;
+  display: block;
+  color: rgba(0, 195, 255, 0.5);
   font-size: 30px;
   position: absolute;
-  bottom: 10px; /* Ajusta la posición desde la parte inferior según sea necesario */
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  .text {
-    grid-row: 1;
-    font-size: 25px;
-    padding: 30px 90px 0px 0px;
-  }
-
-  .reservar {
-    grid-row: 2;
-    margin-top: 15px;
-    justify-content: center;
-    align-items: center;
-    position: static; /* Restaura la posición estática en dispositivos móviles */
-  }
-
-  .reservar .mobileIcon {
-    display: block;
-  }
 }

@@ -7,11 +7,17 @@ module.exports = (sequelize) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        userId: {
-            type: DataTypes.INTEGER,
+        nombre: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        reviewedUserId: {
-            type: DataTypes.INTEGER,
+        apellido: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        comentario: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         rating: {
             type: DataTypes.INTEGER,

@@ -29,16 +29,15 @@ const Landing = () => {
 
   return (
     <div className={style.container} id="landing-section">
-      <div className={style.text}>
-        <h1><span style={{ color: 'green' }}>{typedText}</span><br></br>tu destino perfecto para desconectar de la rutina y conectar con la naturaleza.</h1>
-      </div>
-      <div className={style.reservar}>
-        <button>
+      <h1 className={style.titulo}><span>{typedText}</span></h1>
+      <div className={style.content}>
+        <h2 className={style.text}>Desconecta de la rutina y conecta con la naturaleza</h2>
+        <button className={style.reservar}>
           Reservar
         </button>
-        <div className={style.mobileIcon} onClick={() => scrollToSection("fotos-section")}>
-          <FontAwesomeIcon icon={faArrowDown} />
-        </div>
+      </div>
+      <div className={style.mobileIcon} onClick={() => scrollToSection("fotos-section")}>
+        <FontAwesomeIcon icon={faArrowDown} />
       </div>
     </div>
   );

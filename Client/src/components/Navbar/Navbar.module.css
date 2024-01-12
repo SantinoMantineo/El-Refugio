@@ -16,7 +16,7 @@
 .navbar a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   margin: 0 10px; /* Ajusta el espacio entre las palabras */
 }
@@ -42,16 +42,24 @@
     justify-content: center;
   }
 
-  .logo {
-    display: none;
+  .directAccess{
+    margin-left: 50px;
+    margin-right: 50px;
   }
+
   .navbar a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    margin: 0 11px;
     /* Retira el padding en pantallas pequeñas */
     font-size: 23px;
     
   }
+}
+
+@media (max-width: 768px) {
+  .reservar{
+    display: none;
+  }
+  
 }
