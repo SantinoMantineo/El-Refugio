@@ -40,7 +40,7 @@ function App() {
                 </motion.div>
                 <Fotos id="fotos-section"/>
                 <Review id="review-section"/>
-                <Planes id="planes-section"/>
+                {/* <Planes id="planes-section"/> */}
                 <Form id="form-section"/>
               </div>
         }

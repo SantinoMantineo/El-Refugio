@@ -22,6 +22,27 @@
     backdrop-filter: blur(4px);
   }
   
+  .reservar {
+    top: 80%;
+    margin-bottom: 5%;
+    display: block;
+    position: absolute;
+    margin: auto;
+    background-color: transparent;
+    border: 2px solid rgba(0, 195, 255, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(3, 0, 20, 0.1);
+    backdrop-filter: blur(3px);
+  }
+  
+  .reservar:hover {
+    background-color: rgba(0, 195, 255, 0.5);
+    color: white;
+  }
+
   .title {
     color: white;
     font-size: 40px;
@@ -33,26 +54,46 @@
     transform: translate(-50%, -50%);
     z-index: 1;
   }
-  
   .carruselcontainer {
     top: 10%; /* Ajusta según sea necesario */
     z-index: 2; /* Asegura que el carrusel esté sobre el contenido al hacerse sticky */
     width: 50%;
     height: 50%;
     margin: 0 auto;
-    padding-top: 8%;
+    padding-top: 12%;
   }
   
+  .box {
+    margin-bottom: 20px; /* Ajusta según sea necesario */
+  }
   
-  /* Estilos para las imágenes dentro del carrusel */
-  .carrusel img {
-    border: none;
-    border-radius: 10px;
-    width: 50%;
-    height: 50%;
-    object-fit: contain; /* Mantiene la relación de aspecto de la imagen sin deformarla */
-    cursor: pointer; /* Agrega un cursor de apuntador al pasar sobre las imágenes */
-    margin: 0 auto;
+  /* Ajusta estilos para .content */
+  .box .content {
+    position: relative;
+    width: 190px;
+    height: 254px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Cambia a disposición de columna */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Agrega estilos para .rating */
+  .box .content .rating {
+    font-size: 18px; /* Ajusta según sea necesario */
+    margin-top: 10px; /* Espaciado desde el comentario */
+  }
+  .slick-slide {
+    margin-right: 20px; /* Adjust as needed to create space between slides */
   }
   
   @media screen and (max-width: 1200px) {
@@ -100,6 +141,10 @@
         height: 90%;
         object-fit: contain; /* Mantiene la relación de aspecto de la imagen sin deformarla */
         cursor: pointer; /* Agrega un cursor de apuntador al pasar sobre las imágenes */
+    }
+
+    .box .content {
+      padding: 20px 100px;
     }
   }
   

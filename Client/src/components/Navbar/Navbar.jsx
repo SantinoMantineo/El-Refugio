@@ -25,9 +25,6 @@ const Navbar = () => {
           <Link onClick={() => scrollToSection("review-section")}>
             <span>Reseñas</span>
           </Link>
-          <Link onClick={() => scrollToSection("planes-section")}>
-            <span>Planes</span>
-          </Link>
           <Link className={style.reservar} onClick={() => scrollToSection("form-section")}>
             <span>Reservar</span>
           </Link>
