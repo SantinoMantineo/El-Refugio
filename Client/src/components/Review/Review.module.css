@@ -65,6 +65,7 @@
   
   .box {
     margin-bottom: 20px; /* Ajusta según sea necesario */
+    margin-left: 10px;
   }
   
   /* Ajusta estilos para .content */
@@ -92,9 +93,6 @@
     font-size: 18px; /* Ajusta según sea necesario */
     margin-top: 10px; /* Espaciado desde el comentario */
   }
-  .slick-slide {
-    margin-right: 20px; /* Adjust as needed to create space between slides */
-  }
   
   @media screen and (max-width: 1200px) {
     .title {
@@ -116,10 +114,37 @@
         height: 70%;
         object-fit: contain; /* Mantiene la relación de aspecto de la imagen sin deformarla */
         cursor: pointer; /* Agrega un cursor de apuntador al pasar sobre las imágenes */
-
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .box {
+      margin-bottom: 20px; /* Ajusta según sea necesario */
+      margin-left: 15%;
+    }
+  
+    /* Ajusta estilos para .content */
+    .box .content {
+      position: relative;
+      width: 70%; /* Adjust the width as needed */
+      max-width: 300px; /* Set a max-width if necessary */
+      height: 254px;
+      padding: 20px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1;
+      transform: 0.5s;
+      color: #fff;
+      display: flex;
+      flex-direction: column; /* Cambia a disposición de columna */
+      justify-content: center; /* Espaciado entre elementos */
+      align-items: center;
+      text-align: center;
     }
   }
   
+
   @media screen and (max-width: 600px) {
     .title {
       font-size: 35px;
@@ -127,7 +152,7 @@
       transform: translate(-50%, -50%);
     }
     .carruselcontainer {
-        padding-top: 95%;
+        padding-top: 80%;
         width: 90%;
         height: 90%;
         margin: 0 auto;
@@ -142,9 +167,30 @@
         object-fit: contain; /* Mantiene la relación de aspecto de la imagen sin deformarla */
         cursor: pointer; /* Agrega un cursor de apuntador al pasar sobre las imágenes */
     }
-
+    .reservar{
+      top: 90%;
+    }
+    .box{
+      margin-left: 10%;
+    }
     .box .content {
-      padding: 20px 100px;
+      position: relative;
+      width: 70%; /* Adjust the width as needed */
+      max-width: 300px; /* Set a max-width if necessary */
+      height: 254px;
+      padding: 20px 10px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1;
+      transform: 0.5s;
+      color: #fff;
+      display: flex;
+      flex-direction: column; /* Cambia a disposición de columna */
+      justify-content: center; /* Espaciado entre elementos */
+      align-items: center;
+      text-align: center;
     }
   }
   

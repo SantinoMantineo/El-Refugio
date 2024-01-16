@@ -19,7 +19,17 @@ const Review = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 1050,
+        settings: {
+          autoplay: true,
+          dots: true,
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 750,
         settings: {
           autoplay: true,
           dots: true,
