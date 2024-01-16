@@ -160,12 +160,30 @@
     background-color: rgba(0, 195, 255, 0.5);
     color: white;
   }
-.carruselcontainerNone{
-  display: none;
-}
-.reservarNone{
-  display: none;
-}
+  .carruselcontainerNone{
+    display: none;
+  }
+  .reservarNone{
+    display: none;
+  }
+  .rating {
+    display: flex;
+  }
+
+  .rating p {
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  .rating input {
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  .rating label {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
   .title {
     color: white;
     font-size: 40px;

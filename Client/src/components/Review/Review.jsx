@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
@@ -124,6 +124,11 @@ const Review = () => {
 
   }
   const reviews = [review1, review2, review3, review4]
+  
+  const handleRating = async (value) => {
+    setFormData((prevData) => ({ ...prevData, rating: value }));
+  };
+
   return (
     <div className={style.principalDiv} id="review-section">
       <div className={style.overlay}></div>
@@ -216,15 +221,20 @@ const Review = () => {
           </div>
           <div className={style.part1}>
             <label>
-              Rating
-              <input
-                className={style.input}
-                type="textarea"
-                name="indicaciones"
-                value={formData.indicaciones}
-                onChange={handleChange}
-                placeholder='Rating'
-              />
+              <div className={style.rating}>
+                      <p>Calificacion</p>
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <label key={value}>
+                          <input
+                            type="radio"
+                            name="rating"
+                            value={value}
+                            onClick={() => handleRating(value)}
+                          />
+                          {value}
+                        </label>
+                      ))}
+                    </div>
             </label>
           </div>
         </form>
