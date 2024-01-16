@@ -42,10 +42,10 @@ const Review = () => {
   };
   
   const [formData, setFormData] = useState({
-    Nombre: "",
-    Apellido: "",
-    Comentario: "",
-    Calificacion: "",
+    nombre: "",
+    title: "",
+    comentario: "",
+    rating: "",
   });
 
   const handleChange = (e) => {
@@ -156,50 +156,74 @@ const Review = () => {
       </Slider>
 
       </div>
-      <button onClick={()=> setShowModal(true)} className={style.reservar}>
-        Crear Review
+      <button onClick={()=> setShowModal(true)} className={ !showModal ? style.reservar : style.reservarNone}>
+        Crear Reseña
       </button>
       {showModal && (
           <div className={style.modal}>
             <div className={style.modalContent}>
-              <button
-                className={style.close}
-                onClick={() => setShowModal(false)}
-              >
-                X
-              </button>
               <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         className={style.container}
       >
-        <h3>Tú dirección para envíos</h3>
+                      <button
+                className={style.close}
+                onClick={() => setShowModal(false)}
+              >
+                ←
+              </button>
+        <h3>Crear Reseña</h3>
         <form className={style.create}>
           <div className={style.part1}>
             <label>
-              Calle
+              Nombre
               <input
                 className={style.input}
                 type="text"
-                name="calle"
-                value={formData.calle}
+                name="nombre"
+                value={formData.nombre}
                 onChange={handleChange}
-                placeholder="Ej: Necochea"
+                placeholder="Ej: Marcelo Martinez"
               />
             </label>
           </div>
-
-          
           <div className={style.part1}>
             <label>
-              Indicaciones Extra
+              Titulo del Comentario
+              <input
+                className={style.input}
+                type="textarea"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+                placeholder='Ej: Ideal Para Niños'
+              />
+            </label>
+          </div>
+          <div className={style.part1}>
+            <label>
+              Comentario
+              <input
+                className={style.input}
+                type="textarea"
+                name="comentario"
+                value={formData.comentario}
+                onChange={handleChange}
+                placeholder='Ej: El lugar excelente, la atencion todavia mejor!'
+              />
+            </label>
+          </div>
+          <div className={style.part1}>
+            <label>
+              Rating
               <input
                 className={style.input}
                 type="textarea"
                 name="indicaciones"
                 value={formData.indicaciones}
                 onChange={handleChange}
-                placeholder='Ej: Piso 1, Dto. "A"'
+                placeholder='Rating'
               />
             </label>
           </div>

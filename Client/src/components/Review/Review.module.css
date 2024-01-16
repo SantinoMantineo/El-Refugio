@@ -26,6 +26,7 @@
     position: relative;
   }
   .container {
+    margin-top: 45%;
     display: grid;
     width: 340px;
     height: auto;
@@ -33,27 +34,33 @@
     justify-self: center;
     text-align: left;
     border-radius: 10px;
+    border: 5px solid rgba(0, 195, 255, 0.5);
+    background: transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 10px 15px rgba(0, 195, 255, 0.5);
   }
   
   .container h3 {
-    margin-top: 60px;
     text-align: center;
     align-self: center;
-    color: gray;
-    font-style: italic;
-    font-size: 16px;
+    color: white;
+    font-size: 25px;
   }
   
-  .container h6 {
-    border: 2px solid rgba(128, 128, 128, 0.3);
-    color: gray;
-    text-align: center;
-    padding-top: 17px;
-    height: 30px;
-    margin: 0;
+
+  .close{
+    background-color: rgba(0, 195, 255, 0.5);
+    width: 40px;
+    height: auto;
+    border: none;
     border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(125, 125, 125, 0.3);
+    font-size: 25px;
+    justify-self: center;
+    margin-right: 90%;
+    margin-top: 3%;
+
   }
-  
   .create select {
     display: grid;
     width: 243px;
@@ -74,11 +81,12 @@
     margin-left: 30px;
     margin-right: 30px;
     width: auto;
-    font-size: 12px;
-    color: grey;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
   }
   
   .input {
+    margin-top: 10px;
     margin-bottom: 20px;
     min-width: 235px;
     height: 30px;
@@ -87,7 +95,7 @@
     border: none;
     align-self: center;
     padding-left: 10px;
-    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.2);
+    box-shadow: 0px 5px 10px rgba(0, 195, 255, 0.5);
     outline: none;
   }
   
@@ -98,7 +106,7 @@
   }
   
   .button {
-    background-color: cornflowerblue;
+    background-color: rgba(0, 195, 255, 0.5);
     width: 90px;
     height: 40px;
     border: none;
@@ -110,15 +118,8 @@
   }
   
   .container p:hover {
-    background-color: #1a535c;
+    background-color: rgba(0, 195, 255, 0.5);
     color: whitesmoke;
-  }
-  
-  .error {
-    display: grid;
-    font-size: 12px;
-    color: red;
-    margin-top: -15px;
   }
   
   @media (max-width: 768px) {
@@ -160,6 +161,9 @@
     color: white;
   }
 .carruselcontainerNone{
+  display: none;
+}
+.reservarNone{
   display: none;
 }
   .title {
