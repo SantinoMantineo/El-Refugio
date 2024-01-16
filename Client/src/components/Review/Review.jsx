@@ -140,7 +140,7 @@ const Review = () => {
       >
         RESEÑAS
       </motion.h1>
-      <div className={style.carruselcontainer}>
+      <div className={ !showModal ? style.carruselcontainer : style.carruselcontainerNone}>
       <Slider {...settings} className={style.carrusel}>
         {reviews.map((review, index) => (
           <div key={index} className={`${style.box} ${style.reviewCard}`}>
@@ -186,97 +186,10 @@ const Review = () => {
                 onChange={handleChange}
                 placeholder="Ej: Necochea"
               />
-              {errors.calle && (
-                <span className={style.error}>{errors.calle}</span>
-              )}
             </label>
           </div>
 
-          <div className={style.part1}>
-            <label>
-              Numero de Casa
-              <input
-                className={style.input}
-                type="text"
-                name="numero"
-                value={formData.numero}
-                onChange={handleChange}
-                placeholder="Ej: 1900"
-              />
-              {errors.numero && (
-                <span className={style.error}>{errors.numero}</span>
-              )}
-            </label>
-          </div>
-
-          <div className={style.part1}>
-            <label>
-              Piso/Depto
-              <input
-                className={style.inputCheck}
-                type="checkbox"
-                name="pisoDeptoChecked"
-                checked={formData.pisoDeptoChecked}
-                onChange={handleChange}
-              />
-            </label>
-          </div>
-
-          {formData.pisoDeptoChecked && (
-            <>
-              <div className={style.part1}>
-                <label>
-                  Piso
-                  <input
-                    className={style.input}
-                    type="text"
-                    name="piso"
-                    value={formData.piso}
-                    onChange={handleChange}
-                    placeholder="Ej: 1"
-                  />
-                  {errors.piso && (
-                    <span className={style.error}>{errors.piso}</span>
-                  )}
-                </label>
-              </div>
-
-              <div className={style.part1}>
-                <label>
-                  Depto
-                  <input
-                    className={style.input}
-                    type="text"
-                    name="depto"
-                    value={formData.depto}
-                    onChange={handleChange}
-                    placeholder='Ej: "A"'
-                  />
-                  {errors.depto && (
-                    <span className={style.error}>{errors.depto}</span>
-                  )}
-                </label>
-              </div>
-            </>
-          )}
-
-          <div className={style.part1}>
-            <label>
-              Numero Celular
-              <input
-                className={style.input}
-                type="text"
-                name="celular"
-                value={formData.celular}
-                onChange={handleChange}
-                placeholder="Ej: 3408 12345"
-              />
-              {errors.celular && (
-                <span className={style.error}>{errors.celular}</span>
-              )}
-            </label>
-          </div>
-
+          
           <div className={style.part1}>
             <label>
               Indicaciones Extra
