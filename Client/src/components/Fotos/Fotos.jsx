@@ -50,7 +50,14 @@ const Fotos = () => {
       >
         FOTOS
       </motion.h1>
-      <div className={style.carruselcontainer}>
+      <motion.div         ref={ref}
+        initial={{ opacity: 0, y: 50, scale: 0.5 }}
+        animate={{
+          opacity: inView ? 1 : 0,
+          y: inView ? 0 : 50,
+          scale: inView ? 1 : 0.5,
+        }}
+        transition={{ duration: 1 }} className={style.carruselcontainer}>
         <Slider {...settings} className={style.carrusel}>
           <div>
             <img src={carrusel} alt="Carrusel 1" />
@@ -62,7 +69,7 @@ const Fotos = () => {
             <img src={carrusel3} alt="Carrusel 3" />
           </div>
         </Slider>
-      </div>
+      </motion.div>
     </div>
   );
 };
