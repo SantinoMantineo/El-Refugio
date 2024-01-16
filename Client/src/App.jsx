@@ -22,22 +22,6 @@ function App() {
         <Route path="/" element={
                 <div className="content">
                 <Landing id="landing-section"/>
-                <motion.div className="animationDiv">
-                  <motion.div
-                    className="line"
-                    animate={{
-                      x: [-500, 0],
-                    }}
-                    transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
-                  ></motion.div>
-                  <motion.div
-                    className="line"
-                    animate={{
-                      x: [500, 0],
-                    }}
-                    transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
-                  ></motion.div>
-                </motion.div>
                 <Fotos id="fotos-section"/>
                 <Review id="review-section"/>
                 {/* <Planes id="planes-section"/> */}

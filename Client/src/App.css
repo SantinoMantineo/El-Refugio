@@ -2,18 +2,3 @@
     overflow: hidden;
   }
   
-  .animationDiv {
-    background-color: #FF9843;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10px;
-    width: 100%;
-  }
-  
-  .line {
-    height: 100%;
-    width: 50%;
-    background-color: #304D30;
-  }
-  
