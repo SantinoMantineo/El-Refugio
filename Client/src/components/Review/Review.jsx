@@ -124,7 +124,7 @@ const Review = () => {
 
   }
   const reviews = [review1, review2, review3, review4]
-  
+
   const handleRating = async (value) => {
     setFormData((prevData) => ({ ...prevData, rating: value }));
   };
@@ -145,7 +145,14 @@ const Review = () => {
       >
         RESEÑAS
       </motion.h1>
-      <div className={ !showModal ? style.carruselcontainer : style.carruselcontainerNone}>
+      <motion.div         ref={ref}
+        initial={{ opacity: 0, y: 50, scale: 0.5 }}
+        animate={{
+          opacity: inView ? 1 : 0,
+          y: inView ? 0 : 50,
+          scale: inView ? 1 : 0.5,
+        }}
+        transition={{ duration: 1 }} className={ !showModal ? style.carruselcontainer : style.carruselcontainerNone}>
       <Slider {...settings} className={style.carrusel}>
         {reviews.map((review, index) => (
           <div key={index} className={`${style.box} ${style.reviewCard}`}>
@@ -160,7 +167,7 @@ const Review = () => {
         ))}
       </Slider>
 
-      </div>
+      </motion.div>
       <button onClick={()=> setShowModal(true)} className={ !showModal ? style.reservar : style.reservarNone}>
         Crear Reseña
       </button>
