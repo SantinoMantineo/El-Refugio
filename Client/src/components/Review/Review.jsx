@@ -129,6 +129,9 @@ const Review = () => {
     setFormData((prevData) => ({ ...prevData, rating: value }));
   };
 
+  useEffect(()=>{
+    console.log(formData)
+  },[formData])
   return (
     <div className={style.principalDiv} id="review-section">
       <div className={style.overlay}></div>
