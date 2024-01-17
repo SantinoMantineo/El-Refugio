@@ -43,7 +43,6 @@ const Review = () => {
   
   const [formData, setFormData] = useState({
     nombre: "",
-    title: "",
     comentario: "",
     rating: "",
   });
@@ -57,24 +56,12 @@ const Review = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formErrors = validateAddressForm(formData);
-
-    if (Object.values(formErrors).some((error) => error)) {
-      setErrors(formErrors);
-      return;
-    }
-
     let ubicationData = {
       direccion: `${formData.calle} ${formData.numero}`,
       celular: formData.celular,
       indicaciones: formData.indicaciones,
       id: userData.id,
     };
-
-    if (formData.pisoDeptoChecked) {
-      ubicationData.piso = formData.piso;
-      ubicationData.depto = formData.depto;
-    }
 
     try {
       const response = await axios.post("/envios/ubiForm", ubicationData);
@@ -95,7 +82,6 @@ const Review = () => {
 
   const review1 = {
     nombre: "Santino Mantineo",
-    titulo: "Una verga",
     Comentario: "El lugar esta tremendo",
     rating: 4
 
@@ -103,7 +89,6 @@ const Review = () => {
 
   const review2 = {
     nombre: "Indira Mantineo",
-    titulo: "Una Locura",
     Comentario: "no vuelvo mas",
     rating: 5
 
@@ -111,14 +96,12 @@ const Review = () => {
 
   const review3 = {
     nombre: "Mauricio Mantineo",
-    titulo: "Una Maravilla",
     Comentario: "Me golpeo una silla aca",
     rating: 3
 
   }
   const review4 = {
     nombre: "AA AA",
-    titulo: "Una ASD",
     Comentario: "no vueASDlvo mas",
     rating: 5
 
@@ -200,19 +183,6 @@ const Review = () => {
                 value={formData.nombre}
                 onChange={handleChange}
                 placeholder="Ej: Marcelo Martinez"
-              />
-            </label>
-          </div>
-          <div className={style.part1}>
-            <label>
-              Titulo del Comentario
-              <input
-                className={style.input}
-                type="textarea"
-                name="title"
-                value={formData.title}
-                onChange={handleChange}
-                placeholder='Ej: Ideal Para Niños'
               />
             </label>
           </div>
